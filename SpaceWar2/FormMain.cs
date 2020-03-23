@@ -19,6 +19,24 @@ namespace SpaceWar2
         private void timer1_Tick(object sender, EventArgs e)
         {
             EnemyBox.Top += 1;
+            pictureBox1.Top += 1;
+            pictureBox2.Top += 1;
+        }
+
+        private void FormMain_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void FormMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Left: MyBox1.Left -= 10; break;
+                case Keys.Right: MyBox1.Left += 10; break;
+            }
+
+            
         }
     }
 }
