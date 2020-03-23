@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.EnemyBox = new System.Windows.Forms.PictureBox();
             this.MyBox1 = new System.Windows.Forms.PictureBox();
+            this.timerEnemy = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.EnemyBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,12 @@
             this.MyBox1.TabIndex = 0;
             this.MyBox1.TabStop = false;
             // 
+            // timerEnemy
+            // 
+            this.timerEnemy.Enabled = true;
+            this.timerEnemy.Interval = 10;
+            this.timerEnemy.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -75,6 +83,7 @@
 
         private System.Windows.Forms.PictureBox MyBox1;
         private System.Windows.Forms.PictureBox EnemyBox;
+        private System.Windows.Forms.Timer timerEnemy;
     }
 }
 

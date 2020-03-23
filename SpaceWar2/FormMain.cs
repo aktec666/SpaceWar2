@@ -15,5 +15,10 @@ namespace SpaceWar2
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            EnemyBox.Top += 1;
+        }
     }
 }
