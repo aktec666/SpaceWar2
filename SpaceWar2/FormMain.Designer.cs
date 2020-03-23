@@ -71,8 +71,11 @@
             this.ClientSize = new System.Drawing.Size(1125, 596);
             this.Controls.Add(this.EnemyBox);
             this.Controls.Add(this.MyBox1);
+            this.KeyPreview = true;
             this.Name = "FormMain";
             this.Text = "Космические войны";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormMain_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.EnemyBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyBox1)).EndInit();
             this.ResumeLayout(false);
